@@ -1,6 +1,6 @@
 <?php
 
-namespace Phoenix\Enum\Traits;
+namespace PHPNomad\Enum\Traits;
 
 use ReflectionClass;
 use UnexpectedValueException;
