@@ -12,6 +12,14 @@
         {
             "type": "vcs",
             "url": "https://github.com/phpnomad/tests.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/phpnomad/cache.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/phpnomad/singleton.git"
         }
     ],
     "autoload": {
@@ -32,6 +40,10 @@
     ],
     "require-dev": {
         "phpnomad/tests": "^0.1.0"
+    },
+    "require": {
+        "phpnomad/singleton": "dev-main",
+        "phpnomad/cache": "dev-main"
     },
     "config": {
         "allow-plugins": {
