@@ -8,20 +8,6 @@
     "scripts": {
         "php-cs-fixer": "php-cs-fixer fix"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/phpnomad/tests.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/phpnomad/cache.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/phpnomad/singleton.git"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "PHPNomad\\Enum\\": "lib/"
@@ -42,8 +28,8 @@
         "phpnomad/tests": "^0.1.0"
     },
     "require": {
-        "phpnomad/singleton": "dev-main",
-        "phpnomad/cache": "dev-main"
+        "phpnomad/singleton": "^1.0",
+        "phpnomad/cache": "^1.0"
     },
     "config": {
         "allow-plugins": {
