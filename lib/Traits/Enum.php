@@ -2,14 +2,12 @@
 
 namespace PHPNomad\Enum\Traits;
 
-use PHPNomad\Cache\Traits\WithInstanceCache;
 use PHPNomad\Singleton\Traits\WithInstance;
 use ReflectionClass;
 use UnexpectedValueException;
 
 trait Enum
 {
-    use WithInstanceCache;
     use WithInstance;
 
     /**
@@ -41,12 +39,14 @@ trait Enum
      */
     public static function getValues(): array
     {
-        return static::instance()->getFromInstanceCache('values', function(){
+        if(!isset(static::instance()->values)){
             // Using reflection to get the constants of the caller class
             $calledClass = get_called_class();
             $reflection = new ReflectionClass($calledClass);
-            return array_values($reflection->getConstants());
-        });
+            static::instance()->values = array_values($reflection->getConstants());
+        }
+
+        return static::instance()->values;
     }
 
     /**
