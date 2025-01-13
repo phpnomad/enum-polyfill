@@ -10,6 +10,8 @@ trait Enum
 {
     use WithInstance;
 
+    private array $values;
+
     /**
      * Prevent construction of instances.
      */
